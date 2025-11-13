@@ -31,6 +31,14 @@
             ],
             "styles": [
               "src/styles.scss"
+            ],
+            "loader": {
+              ".jpg": "file"
+            },
+            "externalDependencies": [
+              "path",
+              "fs",
+              "crypto"
             ]
           },
           "configurations": {
@@ -75,6 +83,7 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
+            "karmaConfig": "karma.conf.js",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
@@ -92,7 +101,12 @@
             ],
             "loader": {
               ".jpg": "file"
-            }
+            },
+            "externalDependencies": [
+              "path",
+              "fs",
+              "crypto"
+            ]
           }
         }
       }
